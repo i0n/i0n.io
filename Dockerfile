@@ -13,6 +13,4 @@ FROM gcr.io/distroless/cc as runtime
 ENV ROCKET_ADDRESS=0.0.0.0
 COPY --from=builder /app/target/release/i0nio /
 EXPOSE 8000
-#CMD ["/bin/bash"]
-#CMD ["/app/target/release/i0nio"]
 CMD ["/i0nio"]
